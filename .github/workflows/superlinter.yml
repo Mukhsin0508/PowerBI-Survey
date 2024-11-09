@@ -1,29 +1,45 @@
-# Workflow name
-name: Lint Code Base
+name: Lint and Auto-merge
 
-# Trigger the workflow on push or pull request events
-on: [push, pull_request]
+on:
+  pull_request:
+    types: 
+      - opened        # When PR is first created
+      - synchronize   # When PR branch receives new commits
+      - reopened      # When closed PR is reopened
+      - ready_for_review  # When draft PR is marked ready
+  push:
+    branches:
+      - main
 
 jobs:
-  # Define a job named 'build'
-  build:
-    # Specify the runner environment
+  lint:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Check out the repository code
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Run Super-Linter to lint the codebase
       - name: Run Super-Linter
         uses: github/super-linter@v5
         env:
-          # Specify the default branch name
           DEFAULT_BRANCH: main
-          # Provide the GitHub token for authentication
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Set Super-Linter to skip validation on specific files
           VALIDATE_ALL_CODEBASE: false
-          # Exclude README.md from linting
           FILTER_REGEX_EXCLUDE: README\.md
+
+  auto-merge:
+    needs: lint  # This ensures lint job passes first
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Auto-merge PR
+        if: success()
+        uses: pascalgn/automerge-action@v0.15.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_LABELS: ""  # Allow merge regardless of labels
+          MERGE_METHOD: "merge"  # You can change to "squash" or "rebase"
+          MERGE_DELETE_BRANCH: False
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+          MERGE_REQUIRED_APPROVALS: "0"  # Set to required number of approvals
+          MERGE_RETRIES: "6"
+          MERGE_RETRY_SLEEP: "10000"
