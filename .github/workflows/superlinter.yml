@@ -1,0 +1,45 @@
+name: Lint and Auto-merge
+
+on:
+  pull_request:
+    types: 
+      - opened        # When PR is first created
+      - synchronize   # When PR branch receives new commits
+      - reopened      # When closed PR is reopened
+      - ready_for_review  # When draft PR is marked ready
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v5
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: false
+          FILTER_REGEX_EXCLUDE: README\.md
+
+  auto-merge:
+    needs: lint  # This ensures lint job passes first
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Auto-merge PR
+        if: success()
+        uses: pascalgn/automerge-action@v0.15.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_LABELS: ""  # Allow merge regardless of labels
+          MERGE_METHOD: "merge"  # You can change to "squash" or "rebase"
+          MERGE_DELETE_BRANCH: False
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+          MERGE_REQUIRED_APPROVALS: "0"  # Set to required number of approvals
+          MERGE_RETRIES: "6"
+          MERGE_RETRY_SLEEP: "10000"
