@@ -1,10 +1,14 @@
 name: Lint and Auto-merge
 
+permissions:
+  contents: read
+  statuses: write
+
 on:
   pull_request:
-    types: 
+    types:
       - opened        # When PR is first created
-      - synchronize   # When PR branch receives new commits
+      - synchronize   # When PR branch receives new commits, like even one commits :)
       - reopened      # When closed PR is reopened
       - ready_for_review  # When draft PR is marked ready
   push:
@@ -25,7 +29,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           FILTER_REGEX_EXCLUDE: README\.md
-
   auto-merge:
     needs: lint  # This ensures lint job passes first
     runs-on: ubuntu-latest
@@ -37,9 +40,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_LABELS: ""  # Allow merge regardless of labels
-          MERGE_METHOD: "merge"  # You can change to "squash" or "rebase"
+          MERGE_METHOD: "merge"  # We can change to "squash" or "rebase"
           MERGE_DELETE_BRANCH: False
           MERGE_COMMIT_MESSAGE: "pull-request-title"
-          MERGE_REQUIRED_APPROVALS: "0"  # Set to required number of approvals
+          MERGE_REQUIRED_APPROVALS: "0"  # Set to required number of approvals by teamLead for example
           MERGE_RETRIES: "6"
           MERGE_RETRY_SLEEP: "10000"
