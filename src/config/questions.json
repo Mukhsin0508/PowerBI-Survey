@@ -1,0 +1,295 @@
+[
+  {
+    "id": 1,
+    "text": {
+      "ru": "Выберите язык",
+      "uz": "Tilni tanlang",
+      "oz": "Тилни танланг"
+    },
+    "options": [
+      {
+        "id": "ru",
+        "text": "Русский"
+      },
+      {
+        "id": "uz",
+        "text": "O‘zbek tili (lotin)"
+      },
+      {
+        "id": "oz",
+        "text": "Ўзбек тили (кирил)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": {
+      "ru": "Возраст",
+      "uz": "Yoshingiz",
+      "oz": "Ёшингиз"
+    },
+    "options": [
+      {
+        "text": "9-13"
+      },
+      {
+        "text": "14-17"
+      },
+      {
+        "text": "18-20"
+      },
+      {
+        "text": "21-25"
+      },
+      {
+        "text": "26-30"
+      },
+      {
+        "text": "31-40"
+      },
+      {
+        "text": "41-50"
+      },
+      {
+        "text": "51-59"
+      },
+      {
+        "text": "60+"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": {
+      "ru": "Ваш пол?",
+      "uz": "Jinsingiz?",
+      "oz": "Жинсингиз?"
+    },
+    "options": [
+      {
+        "text": "Мужчина",
+        "text_uz": "Erkak",
+        "text_oz": "Эркак"
+      },
+      {
+        "text": "Женщина",
+        "text_uz": "Ayol",
+        "text_oz": "Аёл"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": {
+      "ru": "Укажите ваш регион",
+      "uz": "Hududingizni tanlang",
+      "oz": "Ҳудудингизни танланг"
+    },
+    "options": "regions.json -> districts.json"
+  },
+  {
+    "id": 5,
+    "text": {
+      "ru": "Сфера деятельности",
+      "uz": "Faoliyat sohangiz",
+      "oz": "Фаолият соҳангиз"
+    },
+    "options": [
+      {
+        "text": "Студент ВУЗ",
+        "text_uz": "Talaba",
+        "text_oz": "Талаба"
+      },
+      {
+        "text": "Работаю в гос структуре",
+        "text_uz": "Davlat tashkilotida ishlayman",
+        "text_oz": "Давлат ташкилотида ишлайман"
+      },
+      {
+        "text": "Работаю в частной компании",
+        "text_uz": "Xususiy kompaniyada ishlayman",
+        "text_oz": "Хусусий компанияда ишлайман"
+      },
+      {
+        "text": "Предприниматель",
+        "text_uz": "Tadbirkor",
+        "text_oz": "Тадбиркор"
+      },
+      {
+        "text": "Руководитель предприятия",
+        "text_uz": "Korxona rahbari",
+        "text_oz": "Корхона раҳбари"
+      },
+      {
+        "text": "Временно безработный",
+        "text_uz": "Vaqtinchalik ishsiz",
+        "text_oz": "Вақтинчалик ишсиз"
+      },
+      {
+        "text": "Домохозяйка, сижу дома",
+        "text_uz": "Uy bekasi",
+        "text_oz": "Уй бекаси"
+      },
+      {
+        "text": "Пенсионер",
+        "text_uz": "Nafaqaxo‘r",
+        "text_oz": "Нафақахўр"
+      },
+      {
+        "text": "Учащийся - учусь в школе, колледже, лицее",
+        "text_uz": "Maktab, kollej, litsey o‘quvchisi",
+        "text_oz": "Мактаб, коллеж, лицей ўқувчиси"
+      },
+      {
+        "text": "Самозанятый",
+        "text_uz": "O‘zini o‘zi band qilgan",
+        "text_oz": "Ўзини ўзи банд қилган"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": {
+      "ru": "Какое определение соответствует вашей профессии больше всего?",
+      "uz": "Kasbingiz uchun eng mos ta’rifni tanlang",
+      "oz": "Касбингиз учун энг мос таърифни танланг"
+    },
+    "options": [
+      {
+        "text": "Работаю в офисе - сидячая работа",
+        "text_uz": "Ofisda ishlayman - o‘tirib ishlayman",
+        "text_oz": "Офисда ишлайман - ўтириб ишлайман"
+      },
+      {
+        "text": "Работаю в помещении, но работа активная, не сидячая",
+        "text_uz": "Binoda ishlayman, faol ish",
+        "text_oz": "Бинода ишлайман, фаол иш"
+      },
+      {
+        "text": "Работаю вне помещения",
+        "text_uz": "Tashqarida ishlayman",
+        "text_oz": "Ташқарида ишлайман"
+      },
+      {
+        "text": "Работаю за рулем",
+        "text_uz": "Rulda ishlayman",
+        "text_oz": "Рулда ишлайман"
+      },
+      {
+        "text": "Работаю в производстве (в цеху\\ на заводе)",
+        "text_uz": "Ishlab chiqarishda ishlayman",
+        "text_oz": "Ишлаб чиқаришда ишлайман"
+      },
+      {
+        "text": "Работаю на стройке",
+        "text_uz": "Qurilishda ishlayman",
+        "text_oz": "Қурилишда ишлайман"
+      },
+      {
+        "text": "Разнорабочий",
+        "text_uz": "Turli sohalarda ishlayman",
+        "text_oz": "Турли соҳаларда ишлайман"
+      },
+      {
+        "text": "Свой вариант",
+        "text_uz": "O‘zingizning varianti",
+        "text_oz": "Ўзингизнинг варианти"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": {
+      "ru": "Сколько вы зарабатываете в месяц?",
+      "uz": "Oyiga qancha daromad topasiz?",
+      "oz": "Ойига қанча даромад топасиз?"
+    },
+    "options": [
+      {
+        "text": "До 1 млн сум (До 100$)"
+      },
+      {
+        "text": "От 1 млн до 3 млн сум (от 100$ до 300$)"
+      },
+      {
+        "text": "От 3 млн до 6 млн сум (от 300$ до 600$)"
+      },
+      {
+        "text": "От 6 млн до 12 млн сум (от 600$ до 1000$)"
+      },
+      {
+        "text": "Выше 12 млн сум (Выше 1000$)"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": {
+      "ru": "Ваше семейное положение?",
+      "uz": "Oilaviy holatingiz?",
+      "oz": "Оилавий ҳолатингиз?"
+    },
+    "options": [
+      {
+        "text": "Да, женат/замужем и есть дети",
+        "text_uz": "Ha, turmush qurganman va farzandlarim bor",
+        "text_oz": "Ҳа, турмуш қурганман ва фарзандларим бор"
+      },
+      {
+        "text": "Да, женат/замужем, но детей нет",
+        "text_uz": "Ha, turmush qurganman, lekin farzandim yo‘q",
+        "text_oz": "Ҳа, турмуш қурганман, лекин фарзандим йўқ"
+      },
+      {
+        "text": "Нет, не женат/не замужем",
+        "text_uz": "Yo‘q, turmush qurmaganman",
+        "text_oz": "Йўқ, турмуш қурмаганман"
+      },
+      {
+        "text": "Нет, не женат/не замужем но есть дети",
+        "text_uz": "Yo‘q, turmush qurmaganman, lekin farzandlarim bor",
+        "text_oz": "Йўқ, турмуш қурмаганман, лекин фарзандларим бор"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": {
+      "ru": "Едите ли Вы острую пищу?",
+      "uz": "Achchiq ovqat iste’mol qilasizmi?",
+      "oz": "Аччиқ овқат истеъмол қиласизми?"
+    },
+    "options": [
+      {
+        "text": "Да",
+        "text_uz": "Ha",
+        "text_oz": "Ҳа"
+      },
+      {
+        "text": "Нет",
+        "text_uz": "Yo‘q",
+        "text_oz": "Йўқ"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": {
+      "ru": "Покупаете ли вы \"Лапши быстрого приготовления\" (пример на фото)?",
+      "uz": "Tez tayyorlanadigan lapsha sotib olasizmi? (rasm misol uchun)",
+      "oz": "Тез тайёрланадиган лапша сотиб оласизми? (Расм мисол учун)"
+    },
+    "options": [
+      {
+        "text": "Да покупаю/потребляю",
+        "text_uz": "Ha, sotib olaman/iste’mol qilaman",
+        "text_oz": "Ҳа, сотиб оламан/истеъмол қиламан"
+      },
+      {
+        "text": "Нет не покупаю/не потребляю",
+        "text_uz": "Yo‘q, sotib olmayman/iste’mol qilmayman",
+        "text_oz": "Йўқ, сотиб олмайман/истеъмол қилмайман"
+      }
+    ]
+  }
+]
