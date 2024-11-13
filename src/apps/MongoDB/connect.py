@@ -1,7 +1,8 @@
 import os
+
 import certifi
-from pymongo import MongoClient
 import dotenv
+from pymongo import MongoClient
 
 # ======== Load env variables ========
 dotenv.load_dotenv()
@@ -26,6 +27,7 @@ collection = db[COLLECTION_NAME]
 
 def get_collection(collection_name):
     return db[collection_name]
+
 
 conversation_collection = get_collection("survey_answers")
 
