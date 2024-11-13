@@ -6,12 +6,20 @@
 
 ```mermaid
 classDiagram
+    class Survey {
+        +Question[] questions
+    }
+
     class Question {
         +int id
         +Text text
-        +array options
+        +Option[] options
         +string type
         +boolean randomize_options
+        +string options_source
+        +string next_question
+        +string default_next_question
+        +int[] scale
     }
 
     class Text {
@@ -22,21 +30,41 @@ classDiagram
 
     class Option {
         +string text
+        +string text_uz
+        +string text_oz
         +boolean requires_input
+        +string next_question
+        +string id
     }
 
     class QuestionType {
         <<enumeration>>
         single_choice
         multiple_choice
+        open_ended
+        rating
     }
 
-    Question "1" *-- "1" Text: contains
+    Survey "1" *-- "many" Question: contains
+    Question "1" *-- "1" Text: has
     Question "1" *-- "many" Option: has
     Question "1" *-- "1" QuestionType: is of type
+    Option "1" *-- "1" Text: may have
+    Option "1" *-- "1" requires_input: may have
 
-    note for Question "randomize_options is optional"
-    note for Option "requires_input is optional"
+    note for Question "
+    - randomize_options is optional
+    - options_source is optional
+    - next_question is optional
+    - default_next_question is optional
+    - scale is optional (for rating questions)
+    "
+
+    note for Option "
+    - requires_input is optional
+    - next_question is optional
+    - id is optional
+    "
 ```
 
 ## Detailed Structure Documentation
