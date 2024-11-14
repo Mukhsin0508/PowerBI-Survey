@@ -19,7 +19,8 @@
         "id": "oz",
         "text": "Ўзбек тили (кирил)"
       }
-    ]
+    ],
+    "type": "single_choice"
   },
   {
     "id": 2,
@@ -56,7 +57,8 @@
       {
         "text": "60+"
       }
-    ]
+    ],
+    "type": "single_choice"
   },
   {
     "id": 3,
@@ -76,7 +78,8 @@
         "text_uz": "Ayol",
         "text_oz": "Аёл"
       }
-    ]
+    ],
+    "type": "single_choice"
   },
   {
     "id": 4,
@@ -85,7 +88,8 @@
       "uz": "Hududingizni tanlang",
       "oz": "Ҳудудингизни танланг"
     },
-    "options": "regions.json -> districts.json"
+    "options_source": "regions.json",
+    "type": "single_choice"
   },
   {
     "id": 5,
@@ -103,12 +107,14 @@
       {
         "text": "Работаю в гос структуре",
         "text_uz": "Davlat tashkilotida ishlayman",
-        "text_oz": "Давлат ташкилотида ишлайман"
+        "text_oz": "Давлат ташкилотида ишлайман",
+        "next_question": 6
       },
       {
         "text": "Работаю в частной компании",
         "text_uz": "Xususiy kompaniyada ishlayman",
-        "text_oz": "Хусусий компанияда ишлайман"
+        "text_oz": "Хусусий компанияда ишлайман",
+        "next_question": 6
       },
       {
         "text": "Предприниматель",
@@ -118,7 +124,8 @@
       {
         "text": "Руководитель предприятия",
         "text_uz": "Korxona rahbari",
-        "text_oz": "Корхона раҳбари"
+        "text_oz": "Корхона раҳбари",
+        "next_question": 6
       },
       {
         "text": "Временно безработный",
@@ -143,9 +150,12 @@
       {
         "text": "Самозанятый",
         "text_uz": "O‘zini o‘zi band qilgan",
-        "text_oz": "Ўзини ўзи банд қилган"
+        "text_oz": "Ўзини ўзи банд қилган",
+        "next_question": 6
       }
-    ]
+    ],
+    "type": "single_choice",
+    "default_next_question": 7
   },
   {
     "id": 6,
@@ -156,7 +166,7 @@
     },
     "options": [
       {
-        "text": "Работаю в офисе - сидячая работа",
+        "text": "Работаю в офисе - сидячая работа.",
         "text_uz": "Ofisda ishlayman - o‘tirib ishlayman",
         "text_oz": "Офисда ишлайман - ўтириб ишлайман"
       },
@@ -176,7 +186,7 @@
         "text_oz": "Рулда ишлайман"
       },
       {
-        "text": "Работаю в производстве (в цеху\\ на заводе)",
+        "text": "Работаю в производстве (в цеху/на заводе)",
         "text_uz": "Ishlab chiqarishda ishlayman",
         "text_oz": "Ишлаб чиқаришда ишлайман"
       },
@@ -192,10 +202,11 @@
       },
       {
         "text": "Свой вариант",
-        "text_uz": "O‘zingizning varianti",
-        "text_oz": "Ўзингизнинг варианти"
+        "requires_input": true
       }
-    ]
+    ],
+    "type": "single_choice",
+    "next_question": 7
   },
   {
     "id": 7,
@@ -220,7 +231,8 @@
       {
         "text": "Выше 12 млн сум (Выше 1000$)"
       }
-    ]
+    ],
+    "type": "single_choice"
   },
   {
     "id": 8,
@@ -250,7 +262,8 @@
         "text_uz": "Yo‘q, turmush qurmaganman, lekin farzandlarim bor",
         "text_oz": "Йўқ, турмуш қурмаганман, лекин фарзандларим бор"
       }
-    ]
+    ],
+    "type": "single_choice"
   },
   {
     "id": 9,
@@ -270,7 +283,8 @@
         "text_uz": "Yo‘q",
         "text_oz": "Йўқ"
       }
-    ]
+    ],
+    "type": "single_choice"
   },
   {
     "id": 10,
@@ -282,14 +296,561 @@
     "options": [
       {
         "text": "Да покупаю/потребляю",
-        "text_uz": "Ha, sotib olaman/iste’mol qilaman",
-        "text_oz": "Ҳа, сотиб оламан/истеъмол қиламан"
+        "next_question": 11
       },
       {
         "text": "Нет не покупаю/не потребляю",
-        "text_uz": "Yo‘q, sotib olmayman/iste’mol qilmayman",
-        "text_oz": "Йўқ, сотиб олмайман/истеъмол қилмайман"
+        "next_question": 34
       }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 11,
+    "text": {
+      "ru": "Впишите название одной лапши быстрого приготовления, которая первым приходит вам на ум?",
+      "uz": "Birinchi esingizga kelgan tez tayyorlanadigan lapsha nomini yozing?",
+      "oz": "Биринчи эсиңизга келган тез тайёрланадиган лапша номини ёзинг?"
+    },
+    "type": "open_ended"
+  },
+  {
+    "id": 12,
+    "text": {
+      "ru": "Впишите название еще одной лапши быстрого приготовления, которую Вы знаете?",
+      "uz": "Yana biladigan tez tayyorlanadigan lapsha nomini yozing?",
+      "oz": "Яна биладиган тез тайёрланадиган лапша номини ёзинг?"
+    },
+    "type": "open_ended"
+  },
+  {
+    "id": 13,
+    "text": {
+      "ru": "Какие еще бренды из списка Вы знаете? Выберите один или несколько",
+      "uz": "Ro'yxatdagi yana qaysi brendlarni bilasiz? Bittasini yoki bir nechtasini tanlang",
+      "oz": "Рўйхатдаги яна қайси брендларни биласиз? Биттасини ёки бир нечтасини танланг"
+    },
+    "options": [
+      {
+        "text": "Биг Бон"
+      },
+      {
+        "text": "Ҳот Лунч"
+      },
+      {
+        "text": "Роллтон"
+      },
+      {
+        "text": "Доширак"
+      },
+      {
+        "text": "Алькони"
+      },
+      {
+        "text": "Биг Ланч"
+      },
+      {
+        "text": "Юкгаежанг"
+      },
+      {
+        "text": "Кимчи"
+      },
+      {
+        "text": "Рамен Кимчи"
+      },
+      {
+        "text": "Булдак"
+      },
+      {
+        "text": "Самянг"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "multiple_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 14,
+    "text": {
+      "ru": "Какой вид лапши быстрого приготовления Вы берёте чаще всего?",
+      "uz": "Qaysi turdagi tez tayyorlanadigan lapshani ko'proq olasiz?",
+      "oz": "Қайси турдаги тез тайёрланадиган лапшани кўпроқ оласиз?"
+    },
+    "options": [
+      {
+        "text": "В пакетике"
+      },
+      {
+        "text": "В ведре (лотке)"
+      }
+    ],
+    "type": "single_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 15,
+    "text": {
+      "ru": "Лапшу быстрого приготовления какого вида берёте больше?",
+      "uz": "Qaysi turdagi tez tayyorlanadigan lapshani ko'proq olasiz?",
+      "oz": "Қайси турдаги тез тайёрланадиган лапшани кўпроқ оласиз?"
+    },
+    "options": [
+      {
+        "text": "Лапшу с сухой суповой приправой (без соуса)"
+      },
+      {
+        "text": "Лапшу с сухой суповой приправой и с соусом"
+      }
+    ],
+    "type": "single_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 16,
+    "text": {
+      "ru": "Какие вкусы предпочитаете при выборе лапши быстрого приготовления?",
+      "uz": "Tez tayyorlanadigan lapsha tanlashda qaysi ta'mlarni afzal ko'rasiz?",
+      "oz": "Тез тайёрланадиган лапша танлашда қайси таъмларни афзал кўрасиз?"
+    },
+    "options": [
+      {
+        "text": "Традиционный (не острый)"
+      },
+      {
+        "text": "Острый"
+      },
+      {
+        "text": "Пикантный (умеренная острота)"
+      },
+      {
+        "text": "Сырный"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "multiple_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 17,
+    "text": {
+      "ru": "Лапшу быстрого приготовления с каким мясом предпочитаете больше?",
+      "uz": "Qaysi go'shtli tez tayyorlanadigan lapshani ko'proq afzal ko'rasiz?",
+      "oz": "Қайси гўштли тез тайёрланадиган лапшани кўпроқ афзал кўрасиз?"
+    },
+    "options": [
+      {
+        "text": "С курицей"
+      },
+      {
+        "text": "С говядиной"
+      },
+      {
+        "text": "С бараниной"
+      },
+      {
+        "text": "С морепродуктами"
+      },
+      {
+        "text": "Без разницы"
+      }
+    ],
+    "type": "multiple_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 18,
+    "text": {
+      "ru": "Как часто вы потребляете лапши быстрого приготовления?",
+      "uz": "Tez tayyorlanadigan lapshani qanchalik tez-tez iste'mol qilasiz?",
+      "oz": "Тез тайёрланадиган лапшани қанчалик тез-тез истеъмол қиласиз?"
+    },
+    "options": [
+      {
+        "text": "Ежедневно"
+      },
+      {
+        "text": "4-5 раз в неделю"
+      },
+      {
+        "text": "2-3 раза в неделю"
+      },
+      {
+        "text": "Один раз в неделю"
+      },
+      {
+        "text": "Несколько раз в месяц"
+      },
+      {
+        "text": "Несколько раз в год"
+      }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 19,
+    "text": {
+      "ru": "Для кого покупаете лапши быстрого приготовления больше всего?",
+      "uz": "Tez tayyorlanadigan lapshani asosan kim uchun sotib olasiz?",
+      "oz": "Тез тайёрланадиган лапшани асосан ким учун сотиб оласиз?"
+    },
+    "options": [
+      {
+        "text": "Для себя"
+      },
+      {
+        "text": "Для семьи"
+      },
+      {
+        "text": "Для детей"
+      },
+      {
+        "text": "Для бригады рабочих"
+      }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 20,
+    "text": {
+      "ru": "Сколько пачек лапши быстрого приготовления покупаете за один раз?",
+      "uz": "Bir marta sotib olayotganda qancha paket tez tayyorlanadigan lapsha olasiz?",
+      "oz": "Бир марта сотиб олаётганда қанча пакет тез тайёрланадиган лапша оласиз?"
+    },
+    "options": [
+      {
+        "text": "1 пачку"
+      },
+      {
+        "text": "2-4 пачки"
+      },
+      {
+        "text": "5-9 пачек"
+      },
+      {
+        "text": "Больше 10 пачек"
+      }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 21,
+    "text": {
+      "ru": "Какой размер упаковки покупаете чаще всего?",
+      "uz": "Qaysi o'lchamdagi qadoqni ko'proq sotib olasiz?",
+      "oz": "Қайси ўлчамдаги қадоқни кўпроқ сотиб оласиз?"
+    },
+    "options": [
+      {
+        "text": "Маленький (50-65 грамм)"
+      },
+      {
+        "text": "Средний (70-95 грамм)"
+      },
+      {
+        "text": "Большой (100-120 грамм)"
+      }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 22,
+    "text": {
+      "ru": "Сколько вы платите за одну упаковку лапши быстрого приготовления?",
+      "uz": "Bir qadoq tez tayyorlanadigan lapsha uchun qancha to'laysiz?",
+      "oz": "Бир қадоқ тез тайёрланадиган лапша учун қанча тўлайсиз?"
+    },
+    "options": [
+      {
+        "text": "Меньше 3 000 сум"
+      },
+      {
+        "text": "4 000-6 000 сум"
+      },
+      {
+        "text": "7 000-10 000 сум"
+      },
+      {
+        "text": "10 000-20 000 сум"
+      },
+      {
+        "text": "Больше 20 000 сум"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 23,
+    "text": {
+      "ru": "Почему потребляете лапшу быстрого приготовления?",
+      "uz": "Nega tez tayyorlanadigan lapsha iste'mol qilasiz?",
+      "oz": "Нега тез тайёрланадиган лапша истеъмол қиласиз?"
+    },
+    "options": [
+      {
+        "text": "Для быстрого перекуса"
+      },
+      {
+        "text": "Из-за удобства приготовления"
+      },
+      {
+        "text": "Нравится вкус"
+      },
+      {
+        "text": "Доступно по цене"
+      },
+      {
+        "text": "Когда нет возможности выйти куда-то пообедать"
+      },
+      {
+        "text": "Когда нет времени на приготовление еды"
+      },
+      {
+        "text": "Когда лень готовить"
+      }
+    ],
+    "type": "multiple_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 24,
+    "text": {
+      "ru": "В каких ситуациях потребляете лапшу быстрого приготовления?",
+      "uz": "Qanday vaziyatlarda tez tayyorlanadigan lapsha iste'mol qilasiz?",
+      "oz": "Қандай вазиятларда тез тайёрланадиган лапша истеъмол қиласиз?"
+    },
+    "options": [
+      {
+        "text": "На завтрак"
+      },
+      {
+        "text": "На обед"
+      },
+      {
+        "text": "На ужин"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "multiple_choice"
+  },
+  {
+    "id": 25,
+    "text": {
+      "ru": "Какие бренды лапши быстрого приготовления Вы пробовали?",
+      "uz": "Qaysi tez tayyorlanadigan lapsha brendlarini sinab ko'rgansiz?",
+      "oz": "Қайси тез тайёрланадиган лапша брендларини синаб кўргансиз?"
+    },
+    "options_source": "user_selected_brands_13",
+    "type": "multiple_choice"
+  },
+  {
+    "id": 26,
+    "text": {
+      "ru": "Какие из них Вы регулярно потребляете?",
+      "uz": "Ulardan qaysilarini muntazam iste'mol qilasiz?",
+      "oz": "Улардан қайсиларини мунтазам истеъмол қиласиз?"
+    },
+    "options_source": "user_selected_brands_25",
+    "type": "multiple_choice"
+  },
+  {
+    "id": 27,
+    "text": {
+      "ru": "Какой из них потребляете чаще остальных?",
+      "uz": "Ulardan qaysi birini boshqalardan ko'proq iste'mol qilasiz?",
+      "oz": "Улардан қайси бирини бошқалардан кўпроқ истеъмол қиласиз?"
+    },
+    "options_source": "user_selected_brands_26",
+    "type": "single_choice"
+  },
+  {
+    "id": 28,
+    "text": {
+      "ru": "Насколько Вы готовы рекомендовать {brand_name}? (0 - точно НЕ БУДУ рекомендовать, 10 - определенно БУДУ рекомендовать)",
+      "uz": "{brand_name} ni qanchalik tavsiya qilasiz? (0 - aniq tavsiya qilmayman, 10 - albatta tavsiya qilaman)",
+      "oz": "{brand_name} ни қанчалик тавсия қиласиз? (0 - аниқ тавсия қилмайман, 10 - албатта тавсия қиламан)"
+    },
+    "type": "rating",
+    "scale": [
+      0,
+      10
     ]
+  },
+  {
+    "id": 29,
+    "text": {
+      "ru": "Почему выбираете {brand_name}?",
+      "uz": "Nega {brand_name} ni tanlaysiz?",
+      "oz": "Нега {brand_name} ни танлайсиз?"
+    },
+    "options": [
+      {
+        "text": "Я доверяю этому бренду"
+      },
+      {
+        "text": "Подходит для всей семьи"
+      },
+      {
+        "text": "Хорошо подходит для обеда"
+      },
+      {
+        "text": "Полноценно заменяет еду"
+      },
+      {
+        "text": "Хорошее соотношение цены и качества"
+      },
+      {
+        "text": "Давно знаю, поэтому беру"
+      },
+      {
+        "text": "Подходит для детей"
+      },
+      {
+        "text": "Лучший вкус"
+      },
+      {
+        "text": "Сделан из натуральных продуктов"
+      },
+      {
+        "text": "Широкий ассортимент"
+      },
+      {
+        "text": "Доступно по цене"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "multiple_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 30,
+    "text": {
+      "ru": "Насколько Вы довольны {brand_name}? Оцените от 1 до 10 (1 - совсем не доволен, 10 - полностью доволен)",
+      "uz": "{brand_name} dan qanchalik mamnunsiz? 1 dan 10 gacha baholang (1 - umuman mamnun emasman, 10 - to'liq mamnunman)",
+      "oz": "{brand_name} дан қанчалик мамнунсиз? 1 дан 10 гача баҳоланг (1 - умуман мамнун эмасман, 10 - тўлиқ мамнунман)"
+    },
+    "type": "rating",
+    "scale": [
+      1,
+      10
+    ]
+  },
+  {
+    "id": 31,
+    "text": {
+      "ru": "С чем потребляете приготовленную лапшу быстрого приготовления?",
+      "uz": "Tayyorlangan tez tayyorlanadigan lapshani nim bilan iste'mol qilasiz?",
+      "oz": "Тайёрланган тез тайёрланадиган лапшани ним билан истеъмол қиласиз?"
+    },
+    "options": [
+      {
+        "text": "С хлебом/лепешкой"
+      },
+      {
+        "text": "С салатом"
+      },
+      {
+        "text": "Ем без ничего"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "single_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 32,
+    "text": {
+      "ru": "Как вы обычно готовите лапшу быстрого приготовления?",
+      "uz": "Odatda tez tayyorlanadigan lapshani qanday tayyorlaysiz?",
+      "oz": "Оддатда тез тайёрланадиган лапшани қандай тайёрлайсиз?"
+    },
+    "options": [
+      {
+        "text": "Просто заливаю кипятком"
+      },
+      {
+        "text": "Добавляю овощи"
+      },
+      {
+        "text": "Добавляю колбасу/сосиски"
+      },
+      {
+        "text": "Добавляю яйцо"
+      },
+      {
+        "text": "Свой вариант",
+        "requires_input": true
+      }
+    ],
+    "type": "multiple_choice",
+    "randomize_options": true
+  },
+  {
+    "id": 33,
+    "text": {
+      "ru": "Считаете ли вы лапшу быстрого приготовления нездоровой пищей?",
+      "uz": "Tez tayyorlanadigan lapshani nosog'lom ovqat deb hisoblaysizmi?",
+      "oz": "Тез тайёрланадиган лапшани носоғлом овқат деб ҳисоблайсизми?"
+    },
+    "options": [
+      {
+        "text": "Да",
+        "text_uz": "Ha",
+        "text_oz": "Ҳа"
+      },
+      {
+        "text": "Нет",
+        "text_uz": "Yo‘q",
+        "text_oz": "Йўқ"
+      }
+    ],
+    "type": "single_choice"
+  },
+  {
+    "id": 34,
+    "text": {
+      "ru": "Почему вы не покупаете лапшу быстрого приготовления?",
+      "uz": "Nega tez tayyorlanadigan lapsha sotib olmaysiz?",
+      "oz": "Нега тез тайёрланадиган лапша сотиб олмайсиз?"
+    },
+    "type": "open_ended"
+  },
+  {
+    "id": 35,
+    "text": {
+      "ru": "Что могло бы побудить вас попробовать лапшу быстрого приготовления?",
+      "uz": "Sizni tez tayyorlanadigan lapshani sinab ko'rishga nima undashi mumkin?",
+      "oz": "Сизни тез тайёрланадиган лапшани синаб кўришга нима ундаши мумкин?"
+    },
+    "type": "open_ended"
+  },
+  {
+    "id": 36,
+    "text": {
+      "ru": "Какие другие быстрые перекусы вы предпочитаете?",
+      "uz": "Qanday boshqa tez gazaklarni afzal ko'rasiz?",
+      "oz": "Қандай бошқа тез газакларни афзал кўрасиз?"
+    },
+    "type": "open_ended",
+    "next_question": "end"
   }
 ]
+
